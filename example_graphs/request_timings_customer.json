@@ -1,0 +1,39 @@
+{
+  "key": "customer-request",
+  "title": "Customer Request Times (last 2 hrs)",
+  "end": "now",
+  "start": {
+    "number": 2,
+    "period": "hours"
+  },
+  "factory": "InstStatsdRequestsGraphFactory",
+  "graph_def_type": "requestTimes",
+  "params": [
+    "request",
+    {
+      "app": "customer-app",
+      "env": "production"
+    }
+  ],
+  "additional_graph_def": {
+    "yaxis": {
+      "max": "auto",
+      "scale": "linear",
+      "min": "auto",
+      "label": "",
+      "includeZero": true
+    },
+    "markers": [
+      {
+        "value": "y = 1300",
+        "type": "error dashed",
+        "label": " Q2 Goal "
+      },
+      {
+        "value": "y = 1000",
+        "type": "warning dashed",
+        "label": " 2020 Goal "
+      }
+    ]
+  }
+}
