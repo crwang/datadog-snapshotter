@@ -11,7 +11,7 @@
   "dependencies": {
     "datadog-canned": "github:crwang/datadog-canned",
     "dotenv": "^8.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-fetch": "^2.6.0"
   }
 }
